@@ -11,6 +11,13 @@
   flex-wrap: wrap;
   flex-direction: column;
   width: 50%;
+  height: 100vh;
+}
+
+#altCounter {
+  background-color: black;
+  color:rgb(112, 76, 182);
+
 }
 
 @media (prefers-reduced-motion: no-preference) {

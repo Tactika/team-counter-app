@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { decrement } from "../counter/counterSlice";
 
 const initialState = {
     value: 0,
@@ -10,10 +9,10 @@ export const altCounterSlice = createSlice({
     name: 'altcounter',
     initialState,
     reducers: {
-        increment: state => {
+        altincrement: state => {
             state.value += 1
         },
-        decrement: state => {
+        altdecrement: state => {
             state.value -= 1
         },
         incrementAmountBy: (state, action) => {
@@ -22,6 +21,6 @@ export const altCounterSlice = createSlice({
     }
 })
 
-export const { increment, decrement, incrementAmountBy } = altCounterSlice.actions
+export const { altincrement, altdecrement, incrementAmountBy } = altCounterSlice.actions
 
 export default altCounterSlice.reducer

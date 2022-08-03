@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { increment, decrement } from './altCounterSlice'
+import { altincrement, altdecrement } from './altCounterSlice'
 import styles from './AltCounter.module.css'
 
 
@@ -9,7 +9,21 @@ const AltCounter = () => {
     const dispatch = useDispatch()
     
   return (
-    <div>AltCounter</div>
+    <div id="altCounter">AltCounter
+      <div>
+        <button
+          className={styles.altButton}
+          aria-label='increment alt value'
+          onClick={() => dispatch(altincrement())}
+        >+</button>
+        <span className={styles.altValue}>{altcount}</span>
+        <button 
+          className={styles.altButton}
+          aria-label='decrement alt value'
+          onClick={() => dispatch(altdecrement())}
+        >-</button>
+      </div>
+    </div>
   )
 }
 
