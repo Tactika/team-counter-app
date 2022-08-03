@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import './App.css';
+import AltCounter from './features/altcounter/AltCounter';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         </div>
         <div id="altCounter" className="counter">
           <img src={logo} className="App-logo" alt="logo" />
-
+          <AltCounter /> 
         </div>
 
       </header>
