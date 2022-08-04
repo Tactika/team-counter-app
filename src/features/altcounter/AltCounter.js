@@ -17,7 +17,7 @@ const AltCounter = () => {
 
 
   return (
-    <div id="altCounter">
+    <div>
       <div className={styles.altRow}>
         <button
           className={styles.altButton}
