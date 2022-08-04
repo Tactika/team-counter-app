@@ -8,10 +8,11 @@ import {
   incrementIfOdd,
   selectCount,
 } from './counterSlice';
+import logo from '../../logo.svg'
 import styles from './Counter.module.css';
 import { incrementAmountBy } from '../altcounter/altCounterSlice';
 
-export function Counter() {
+export default function Counter() {
   const count = useSelector(selectCount);
   const dispatch = useDispatch();
   const [incrementAmount, setIncrementAmount] = useState(2);
@@ -19,7 +20,8 @@ export function Counter() {
   const incrementValue = Number(incrementAmount) || 0;
 
   return (
-    <div>
+    <div className="counter">
+      <img src={logo} className="App-logo" alt="logo" />
       <div className={styles.row}>
         <button
           className={styles.button}
