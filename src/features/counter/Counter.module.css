@@ -3,7 +3,16 @@
   align-items: center;
   justify-content: center;
 }
+.column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
+.column button, input{
+  margin-bottom: 2rem;
+}
 .row > button {
   margin-left: 4px;
   margin-right: 8px;
@@ -11,7 +20,9 @@
 .row:not(:last-child) {
   margin-bottom: 16px;
 }
-
+.row > button{
+  display:flex;
+}
 .value {
   font-size: 78px;
   padding-left: 16px;
