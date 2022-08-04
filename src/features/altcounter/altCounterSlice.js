@@ -1,9 +1,18 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { fetchAltCount } from './altCounterApi';
 
 const initialState = {
     value: 0,
     status: 'idle'
 }
+
+export const incrementAltAsync = createAsyncThunk (
+    'altCounter/fetchAltCount', 
+    async (amount) => { 
+        const response = await fetchAltCount(amount); 
+        return response.data;
+    }
+)
 
 export const altCounterSlice = createSlice({
     name: 'altcounter',
@@ -18,6 +27,16 @@ export const altCounterSlice = createSlice({
         incrementAmountBy: (state, action) => {
             state.value += action.payload
         }
+    }, 
+    extraReducers: (builder) => { 
+        builder 
+        .addCase(incrementAltAsync.pending, (state) => {
+            state.status = 'loading'; 
+        })
+        .addCase(incrementAltAsync.fulfilled, (state, action) => {
+            state.status = 'idle'; 
+            state.value += action.payload;
+        })
     }
 })
 
