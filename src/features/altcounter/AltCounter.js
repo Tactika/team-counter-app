@@ -1,6 +1,6 @@
 import { React, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { altincrement, altdecrement, incrementAmountBy, incrementAltAsync } from './altCounterSlice'
+import { altincrement, altdecrement, incrementAmountBy, incrementAltAsync, incrementIfEven } from './altCounterSlice'
 import styles from './AltCounter.module.css'
 import { incrementByAmount } from '../counter/counterSlice'
 
@@ -41,7 +41,10 @@ const AltCounter = () => {
           Add To White
         </button>
         <button className={styles.altButton} onClick={() => { dispatch(incrementAltAsync(altIncrementAmount)) }}>
-          Add Async 
+          Add Async
+        </button>
+        <button className={styles.altButton} onClick={() => { dispatch(incrementIfEven(altIncrementAmount)) }}>
+          Add If Even
         </button>
       </div>
     </div>
