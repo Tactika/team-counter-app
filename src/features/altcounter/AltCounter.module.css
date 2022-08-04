@@ -3,12 +3,22 @@
     align-items: center;
     justify-content: center;
   }
-
-  .alt-row > button {
+  .column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .column button, input{
+    margin-bottom: 2rem;
+    border: 1px solid rebeccapurple;
+  }
+  .altRow > button {
     margin-left: 4px;
     margin-right: 8px;
   }
-  .alt-row:not(:last-child) {
+  .altRow:not(:last-child) {
     margin-bottom: 16px;
   }
   
@@ -26,8 +36,8 @@
     font-size: 32px;
     padding-left: 12px;
     padding-right: 12px;
-    outline: none;
-    border: 2px solid transparent;
+    /* outline: none; */
+    border: 2px solid rebeccapurple;
     color: rgb(112, 76, 182);
     padding-bottom: 4px;
     cursor: pointer;
@@ -36,7 +46,7 @@
     transition: all 0.15s;
   }
   
-  .alt-textbox {
+  .altTextbox {
     font-size: 32px;
     padding: 2px;
     width: 64px;
