@@ -2,6 +2,7 @@ import { React, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { altincrement, altdecrement, incrementAmountBy } from './altCounterSlice'
 import styles from './AltCounter.module.css'
+import { incrementByAmount } from '../counter/counterSlice'
 
 
 const AltCounter = () => {
@@ -35,6 +36,9 @@ const AltCounter = () => {
         <input type="text" className={styles.altTextbox} aria-label="Set Increment Amount" value={altIncrementAmount} onChange={(e) => changeIncrementAmount(e.target.value)} />
         <button className={styles.altButton} onClick={() => { dispatch(incrementAmountBy(altIncrementAmount)) }}>
           Add Amount
+        </button>
+        <button className={styles.altButton} onClick={() => { dispatch(incrementByAmount(altIncrementAmount)) }}>
+          Add To White
         </button>
       </div>
     </div>
