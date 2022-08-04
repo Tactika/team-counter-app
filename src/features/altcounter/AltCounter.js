@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { altincrement, altdecrement, incrementAmountBy, incrementAltAsync, incrementIfEven } from './altCounterSlice'
 import styles from './AltCounter.module.css'
 import { incrementByAmount } from '../counter/counterSlice'
-
+import logo from '../../logo.svg'
 
 const AltCounter = () => {
   const altcount = useSelector((state) => state.altcounter.value)
@@ -18,7 +18,8 @@ const AltCounter = () => {
 
 
   return (
-    <div>
+    <div className="counter" id="altCounter">
+      <img src={logo} className="App-logo" alt="logo" />
       <div className={styles.altRow}>
         <button
           className={styles.altButton}

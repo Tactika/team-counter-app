@@ -1,22 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import Counters from './features/Counters';
 import './App.css';
-import AltCounter from './features/altcounter/AltCounter';
+import { Routes, Route } from "react-router-dom";
+import Weather from './features/weather/Weather'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div className="counter">
-          <img src={logo} className="App-logo" alt="logo" />
-          <Counter />
-        </div>
-        <div id="altCounter" className="counter">
-          <img src={logo} className="App-logo" alt="logo" />
-          <AltCounter /> 
-        </div>
-
+        <Routes>
+          <Route path='/' element={<Counters />} />
+          <Route path='/weather' element={<Weather />} />
+        </Routes>
       </header>
     </div>
   );
