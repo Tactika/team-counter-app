@@ -2,7 +2,8 @@ import React from 'react';
 import Counters from './features/Counters';
 import './App.css';
 import { Routes, Route } from "react-router-dom";
-import Weather from './features/weather/Weather'
+import Weather from './features/weather/Weather'; 
+import Navbar from './features/navbar'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path='/weather' element={<Weather />} />
         </Routes>
       </header>
+      <Navbar />
     </div>
   );
 }
