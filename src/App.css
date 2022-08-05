@@ -1,10 +1,13 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  z-index: 0;
+
 }
 .counter {
   display: flex;
@@ -17,7 +20,7 @@ background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8)
 }
 
 #altCounter {
-  /* background-color: black; */
+ 
   color:rgb(112, 76, 182);
   background: rgb(0,0,0);
   background: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.95) 88%, rgba(0,0,0,0.75) 100%);
@@ -52,4 +55,8 @@ background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8)
   100% {
     transform: translateY(0px);
   }
+}
+
+.counter, .altcounter {
+  margin-top: 3.5rem;
 }

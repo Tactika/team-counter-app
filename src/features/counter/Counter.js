@@ -56,7 +56,7 @@ export default function Counter() {
           Add To Black
         </button>
         <button
-          className={styles.asyncButton}
+          className={styles.button}
           onClick={() => dispatch(incrementAsync(incrementValue))}
         >
           Add Async

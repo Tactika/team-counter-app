@@ -51,6 +51,7 @@ html, body {
     transform: translateX(-250px);
     transition: transform 250ms ease-in-out;
     background: linear-gradient(180deg, #2b9f29 0%, #903ffb 100%);
+    z-index: 100;
 }
 .sidebarMenuInner{
     margin:0;

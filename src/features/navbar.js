@@ -15,9 +15,8 @@ export default class navbar extends Component {
   </label>
   <div id="sidebarMenu">
     <ul className="sidebarMenuInner">
-      <li>Jelena Jovanovic <span>Web Developer</span></li>
-      <li><Link to="/weather">Weather</Link></li>
       <li><Link to="/">Home</Link></li>
+      <li><Link to="/weather">Weather</Link></li>
     </ul>
   </div>
  
