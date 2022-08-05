@@ -1,10 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useEffect } from "react";
 
 const Weather = () => {
-<<<<<<< Updated upstream
-    return (
-        <h1>Weather</h1>
-=======
     const [weatherData, setWeatherData] = useState()
 
     useEffect(() => {
@@ -42,7 +39,6 @@ const Weather = () => {
             }
 
         </div>
->>>>>>> Stashed changes
     )
 }
 
