@@ -33,10 +33,12 @@ const Weather = () => {
                                     <li>Current Humidity: {weatherData.main.humidity}%</li>
                                 </ul>
                             </div>
+
                         </>
 
                     )
             }
+            
 
         </div>
     )
