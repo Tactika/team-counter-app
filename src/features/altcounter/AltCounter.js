@@ -1,7 +1,7 @@
 import { React, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { altincrement, altdecrement, incrementAmountBy, incrementAltAsync, incrementIfEven } from './altCounterSlice'
-import styles from './AltCounter.module.css'
+// import styles from './AltCounter.module.css'
 import { incrementByAmount } from '../counter/counterSlice'
 import logo from '../../logo.svg'
 
@@ -20,31 +20,31 @@ const AltCounter = () => {
   return (
     <div className="counter" id="altCounter">
       <img src={logo} className="App-logo" alt="logo" />
-      <div className={styles.altRow}>
+      <div className="altRow">
         <button
-          className={styles.altButton}
+          className="altButton"
           aria-label='increment alt value'
           onClick={() => dispatch(altincrement())}
         >+</button>
-        <span className={styles.altValue}>{altcount}</span>
+        <span className="altValue">{altcount}</span>
         <button
-          className={styles.altButton}
+          className="altButton"
           aria-label='decrement alt value'
           onClick={() => dispatch(altdecrement())}
         >-</button>
       </div>
-      <div className={styles.column}>
-        <input type="text" className={styles.altTextbox} aria-label="Set Increment Amount" value={altIncrementAmount} onChange={(e) => changeIncrementAmount(e.target.value)} />
-        <button className={styles.altButton} onClick={() => { dispatch(incrementAmountBy(altIncrementAmount)) }}>
+      <div className="column">
+        <input type="text" className="altTextbox" aria-label="Set Increment Amount" value={altIncrementAmount} onChange={(e) => changeIncrementAmount(e.target.value)} />
+        <button className="altButton" onClick={() => { dispatch(incrementAmountBy(altIncrementAmount)) }}>
           Add Amount
         </button>
-        <button className={styles.altButton} onClick={() => { dispatch(incrementByAmount(altIncrementAmount)) }}>
+        <button className="altButton" onClick={() => { dispatch(incrementByAmount(altIncrementAmount)) }}>
           Add To White
         </button>
-        <button className={styles.altButton} onClick={() => { dispatch(incrementAltAsync(altIncrementAmount)) }}>
+        <button className="altButton" onClick={() => { dispatch(incrementAltAsync(altIncrementAmount)) }}>
           Add Async
         </button>
-        <button className={styles.altButton} onClick={() => { dispatch(incrementIfEven(altIncrementAmount)) }}>
+        <button className="altButton" onClick={() => { dispatch(incrementIfEven(altIncrementAmount)) }}>
           Add If Even
         </button>
       </div>
