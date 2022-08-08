@@ -18,33 +18,33 @@ const AltCounter = () => {
 
 
   return (
-    <div className="counter" id="altCounter">
-      <img src={logo} className="App-logo" alt="logo" />
-      <div className="altRow">
+    <div className='flex flex-wrap flex-col w-1/2 h-screen content-center bg-black text-purple-600 mt-12'>
+      <img src={logo} className="h-64 z-0 animate-App-logo-float" alt="logo" />
+      <div className="flex align-middle justify-center">
         <button
-          className="altButton"
+          className="pl-3 pr-3 pb-1 w-12 h-12 text-4xl border-solid border-2 border-purple-600"
           aria-label='increment alt value'
           onClick={() => dispatch(altincrement())}
         >+</button>
         <span className="altValue">{altcount}</span>
         <button
-          className="altButton"
+          className="pl-3 pr-3 pb-1 w-12 h-12 text-4xl border-solid border-2 border-purple-600"
           aria-label='decrement alt value'
           onClick={() => dispatch(altdecrement())}
         >-</button>
       </div>
-      <div className="column">
-        <input type="text" className="altTextbox" aria-label="Set Increment Amount" value={altIncrementAmount} onChange={(e) => changeIncrementAmount(e.target.value)} />
-        <button className="altButton" onClick={() => { dispatch(incrementAmountBy(altIncrementAmount)) }}>
+      <div className="flex align-middle flex-col justify-center">
+        <input type="text" className="mb-8 border-solid-purple-600" aria-label="Set Increment Amount" value={altIncrementAmount} onChange={(e) => changeIncrementAmount(e.target.value)} />
+        <button className=" pb-1 text-4xl border-solid border-2 border-purple-600 text-purple-600 mb-3" onClick={() => { dispatch(incrementAmountBy(altIncrementAmount)) }}>
           Add Amount
         </button>
-        <button className="altButton" onClick={() => { dispatch(incrementByAmount(altIncrementAmount)) }}>
+        <button className=" pb-1 text-4xl border-solid border-2 border-purple-600 text-purple-600 mb-3" onClick={() => { dispatch(incrementByAmount(altIncrementAmount)) }}>
           Add To White
         </button>
-        <button className="altButton" onClick={() => { dispatch(incrementAltAsync(altIncrementAmount)) }}>
+        <button className=" pb-1 text-4xl border-solid border-2 border-purple-600 text-purple-600 mb-3" onClick={() => { dispatch(incrementAltAsync(altIncrementAmount)) }}>
           Add Async
         </button>
-        <button className="altButton" onClick={() => { dispatch(incrementIfEven(altIncrementAmount)) }}>
+        <button className=" pb-1 text-4xl border-solid border-2 border-purple-600 text-purple-600" onClick={() => { dispatch(incrementIfEven(altIncrementAmount)) }}>
           Add If Even
         </button>
       </div>
