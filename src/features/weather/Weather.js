@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { useEffect } from "react";
 
+
+
 const Weather = () => {
     const [weatherData, setWeatherData] = useState()
 
@@ -33,7 +35,6 @@ const Weather = () => {
                                     <li>Current Humidity: {weatherData.main.humidity}%</li>
                                 </ul>
                             </div>
-
                         </>
 
                     )
