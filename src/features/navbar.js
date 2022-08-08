@@ -19,8 +19,6 @@ export default class navbar extends Component {
             <li><Link to="/weather">Weather</Link></li>
           </ul>
         </div>
-
-
       </div>
     )
   }

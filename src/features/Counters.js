@@ -4,10 +4,10 @@ import React from "react";
 
 const Counters = () => {
     return (
-        <>
+        <div className='flex w-screen' >
             <Counter />
             <AltCounter />
-        </>
+        </div>
     )
 }
 

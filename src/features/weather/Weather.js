@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { useEffect } from "react";
+import Button from '@mui/material/Button';
+import { Card } from '@mui/material';
 
 
 
@@ -26,7 +28,7 @@ const Weather = () => {
                 weatherData === undefined ?
                     (<div>Loading</div>) :
                     (
-                        <>
+                        <Card className='p-8 border-2 shadow-lg'>
                             <h1>Weather</h1>
                             <div>
                                 <h2>{weatherData.name} Weather</h2>
@@ -35,7 +37,9 @@ const Weather = () => {
                                     <li>Current Humidity: {weatherData.main.humidity}%</li>
                                 </ul>
                             </div>
-                        </>
+                            <Button variant="contained">Hello World</Button>
+
+                        </Card>
 
                     )
             }
