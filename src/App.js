@@ -1,9 +1,9 @@
 import React from 'react';
-import Counters from './features/Counters';
+import Counters from './views/home-page/Counters';
 import './styles/App.scss';
 import { Routes, Route } from "react-router-dom";
-import Weather from './features/weather/Weather';
-import Navbar from './features/navbar'
+import Weather from './views/weather-page/Weather';
+import Navbar from './components/Navbar'
 
 function App() {
   return (
