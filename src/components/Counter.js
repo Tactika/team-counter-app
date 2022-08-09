@@ -7,10 +7,9 @@ import {
   incrementAsync,
   incrementIfOdd,
   selectCount,
-} from './counterSlice';
-import logo from '../../logo.svg'
-// import styles from './Counter.module.css';
-import { incrementAmountBy } from '../altcounter/altCounterSlice';
+} from '../redux/slice/counterSlice';
+import logo from '../logo.svg'
+import { incrementAmountBy } from '../redux/slice/altCounterSlice';
 
 export default function Counter() {
   const count = useSelector(selectCount);

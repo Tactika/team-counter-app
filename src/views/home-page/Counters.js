@@ -1,5 +1,5 @@
-import Counter from './counter/Counter'
-import AltCounter from './altcounter/AltCounter'
+import Counter from '../../components/Counter'
+import AltCounter from '../../components/AltCounter'
 import React from "react";
 
 const Counters = () => {

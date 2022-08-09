@@ -1,9 +1,8 @@
 import { React, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { altincrement, altdecrement, incrementAmountBy, incrementAltAsync, incrementIfEven } from './altCounterSlice'
-// import styles from './AltCounter.module.css'
-import { incrementByAmount } from '../counter/counterSlice'
-import logo from '../../logo.svg'
+import { altincrement, altdecrement, incrementAmountBy, incrementAltAsync, incrementIfEven } from '../redux/slice/altCounterSlice'
+import { incrementByAmount } from '../redux/slice/counterSlice'
+import logo from '../logo.svg'
 
 const AltCounter = () => {
   const altcount = useSelector((state) => state.altcounter.value)
@@ -21,6 +20,7 @@ const AltCounter = () => {
     <div className='flex flex-wrap flex-col w-1/2 h-screen content-center bg-black text-purple-600 mt-12'>
       <img src={logo} className="h-64 z-0 animate-App-logo-float" alt="logo" />
       <div className="flex align-middle justify-center">
+
         <button
           className="pl-3 pr-3 pb-1 w-12 h-12 text-4xl border-solid border-2 border-purple-600"
           aria-label='increment alt value'
