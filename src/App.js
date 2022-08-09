@@ -7,14 +7,12 @@ import Navbar from './features/navbar'
 
 function App() {
   return (
-    <div className="App">
+    <div className="items-center" >
       <Navbar />
-      <header className="App-header">
-        <Routes>
-          <Route path='/' element={<Counters />} />
-          <Route path='/weather' element={<Weather />} />
-        </Routes>
-      </header>
+      <Routes>
+        <Route path='/' element={<Counters />} />
+        <Route path='/weather' element={<Weather />} />
+      </Routes>
 
     </div>
   );
