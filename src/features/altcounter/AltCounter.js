@@ -26,7 +26,7 @@ const AltCounter = () => {
           aria-label='increment alt value'
           onClick={() => dispatch(altincrement())}
         >+</button>
-        <span className="altValue">{altcount}</span>
+        <span className="text-7xl pl-10 pr-10 text-purple-600">{altcount}</span>
         <button
           className="pl-3 pr-3 pb-1 w-12 h-12 text-4xl border-solid border-2 border-purple-600"
           aria-label='decrement alt value'
@@ -34,7 +34,7 @@ const AltCounter = () => {
         >-</button>
       </div>
       <div className="flex align-middle flex-col justify-center">
-        <input type="text" className="mb-8 border-solid-purple-600" aria-label="Set Increment Amount" value={altIncrementAmount} onChange={(e) => changeIncrementAmount(e.target.value)} />
+        <input type="text" className="mb-8 text-4xl border-solid border-purple-600" aria-label="Set Increment Amount" value={altIncrementAmount} onChange={(e) => changeIncrementAmount(e.target.value)} />
         <button className=" pb-1 text-4xl border-solid border-2 border-purple-600 text-purple-600 mb-3" onClick={() => { dispatch(incrementAmountBy(altIncrementAmount)) }}>
           Add Amount
         </button>
