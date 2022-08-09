@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
-import altCounterReducer from '../features/altcounter/altCounterSlice'
+import counterReducer from '../slice/counterSlice';
+import altCounterReducer from '../slice/altCounterSlice'
 
 
 export const store = configureStore({

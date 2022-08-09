@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { fetchAltCount } from './altCounterApi';
+import { fetchAltCount } from '../../API/altCounterApi';
 
 const initialState = {
     value: 0,
