@@ -7,6 +7,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import CloudIcon from '@mui/icons-material/Cloud';
 import HomeIcon from '@mui/icons-material/Home';
+import PersonIcon from '@mui/icons-material/Person';
 import { Link } from 'react-router-dom'
 
 const drawerWidth = 240;
@@ -52,7 +53,7 @@ export default function Navbar() {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open}>
+      <AppBar position="fixed" open={open} style={{ background: 'white', color: 'rebeccapurple' }} >
         <Toolbar>
           <IconButton
             color="inherit"
@@ -90,9 +91,9 @@ export default function Navbar() {
         <List>
           <Link to='/'>
             <ListItem disablePadding>
-              <ListItemButton>
+              <ListItemButton className='drawer-button'>
                 <ListItemIcon>
-                  <HomeIcon />
+                  <HomeIcon className='icons' />
                 </ListItemIcon>
                 <ListItemText>Home</ListItemText>
               </ListItemButton>
@@ -100,11 +101,21 @@ export default function Navbar() {
           </Link>
           <Link to='/weather'>
             <ListItem disablePadding>
-              <ListItemButton>
+              <ListItemButton className='drawer-button'>
                 <ListItemIcon>
-                  <CloudIcon />
+                  <CloudIcon className='icons' />
                 </ListItemIcon>
                 <ListItemText>Weather</ListItemText>
+              </ListItemButton>
+            </ListItem>
+          </Link>
+          <Link to='/aboutus'>
+            <ListItem disablePadding>
+              <ListItemButton className='drawer-button'>
+                <ListItemIcon>
+                  <PersonIcon />
+                </ListItemIcon>
+                <ListItemText>About Us</ListItemText>
               </ListItemButton>
             </ListItem>
           </Link>
