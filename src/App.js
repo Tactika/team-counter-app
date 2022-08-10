@@ -9,7 +9,7 @@ import AboutUs from './views/about-us-page/AboutUs';
 
 function App() {
   return (
-    <div className="items-center" >
+    <div className="items-center, body" >
       <Navbar />
         <Routes>
           <Route path='/' element={<Counters />} />

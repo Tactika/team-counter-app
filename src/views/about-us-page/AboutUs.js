@@ -8,26 +8,99 @@ import Typography from '@mui/material/Typography';
 
 export default function AboutUs() {
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        height="140"
-        image="https://avatars.githubusercontent.com/u/16322338?v=4"
-        alt="Mr. Richcreek"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Mr. Richcreek
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-        I'm a Full Stack Software Engineer building professional web applications!
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">GitHub</Button>
-        <Button size="small">LinkedIn</Button>
-        <Button size="small">Portfolio</Button>
-      </CardActions>
-    </Card>
+    <body className="column" >
+        {/* damien card */}
+        <Card sx={{ maxWidth: 345 }}>
+        <CardMedia
+            component="img"
+            height="140"
+            image="https://avatars.githubusercontent.com/u/16322338?v=4"
+            alt="Mr. Richcreek"
+        />
+        <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+            Mr. Richcreek
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+            I'm a Full Stack Software Engineer building professional web applications!
+            </Typography>
+        </CardContent>
+        <CardActions>
+            <Button size="small">GitHub</Button>
+            <Button size="small">LinkedIn</Button>
+            <Button size="small">Portfolio</Button>
+        </CardActions>
+        </Card>
+
+        {/* frank card */}
+        <Card sx={{ maxWidth: 345 }}>
+        <CardMedia
+            component="img"
+            height="140"
+            image="https://avatars.githubusercontent.com/u/98143232?v=4"
+            alt="Mr. Rivera"
+        />
+        <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+            Mr. Rivera
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+            I'm a Junior Full Stack Developer building professional web applications
+            </Typography>
+        </CardContent>
+        <CardActions>
+            <Button size="small">GitHub</Button>
+            <Button size="small">LinkedIn</Button>
+            <Button size="small">Portfolio</Button>
+        </CardActions>
+        </Card>
+
+        {/* nic card */}
+        <Card sx={{ maxWidth: 345 }}>
+        <CardMedia
+            component="img"
+            height="140"
+            image="https://avatars.githubusercontent.com/u/104329673?v=4"
+            alt="Mr. Last"
+        />
+        <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+            Mr. Last
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+            I'm a Junior Full Stack Developer building professional web applications
+            </Typography>
+        </CardContent>
+        <CardActions>
+            <Button size="small">GitHub</Button>
+            <Button size="small">LinkedIn</Button>
+            <Button size="small">Portfolio</Button>
+        </CardActions>
+        </Card>
+
+        {/* val card */}
+        <Card sx={{ maxWidth: 345 }}>
+        <CardMedia
+            component="img"
+            height="140"
+            image="https://avatars.githubusercontent.com/u/104322947?v=4"
+            alt="Mrs. Tovar"
+        />
+        <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+            Mrs. Tovar
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+            I'm a Junior Full Stack Developer building professional web applications
+            </Typography>
+        </CardContent>
+        <CardActions>
+            <Button size="small">GitHub</Button>
+            <Button size="small">LinkedIn</Button>
+            <Button size="small">Portfolio</Button>
+        </CardActions>
+        </Card>
+    </body>
+    
   );
 }
