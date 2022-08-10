@@ -5,11 +5,14 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
 
 export default function AboutUs() {
   return (
-    <body className="column" >
+    <div id ="aboutus" className='flex-wrap' >
         {/* damien card */}
+        <container spacing={2}>
+        <Grid xs={6}>
         <Card sx={{ maxWidth: 345 }}>
         <CardMedia
             component="img"
@@ -31,7 +34,8 @@ export default function AboutUs() {
             <Button size="small">Portfolio</Button>
         </CardActions>
         </Card>
-
+        </Grid>
+        <Grid>
         {/* frank card */}
         <Card sx={{ maxWidth: 345 }}>
         <CardMedia
@@ -54,7 +58,8 @@ export default function AboutUs() {
             <Button size="small">Portfolio</Button>
         </CardActions>
         </Card>
-
+        </Grid>
+        <Grid>
         {/* nic card */}
         <Card sx={{ maxWidth: 345 }}>
         <CardMedia
@@ -77,7 +82,8 @@ export default function AboutUs() {
             <Button size="small">Portfolio</Button>
         </CardActions>
         </Card>
-
+        </Grid>
+        <Grid>
         {/* val card */}
         <Card sx={{ maxWidth: 345 }}>
         <CardMedia
@@ -100,7 +106,8 @@ export default function AboutUs() {
             <Button size="small">Portfolio</Button>
         </CardActions>
         </Card>
-    </body>
-    
+        </Grid>
+        </container>
+    </div>
   );
 }
