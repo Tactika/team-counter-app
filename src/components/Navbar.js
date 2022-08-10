@@ -52,7 +52,7 @@ export default function Navbar() {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open}>
+      <AppBar position="fixed" open={open} style={{ background: 'white', color: 'rebeccapurple' }} >
         <Toolbar>
           <IconButton
             color="inherit"
@@ -90,7 +90,7 @@ export default function Navbar() {
         <List>
           <Link to='/'>
             <ListItem disablePadding>
-              <ListItemButton>
+              <ListItemButton className='drawer-button'>
                 <ListItemIcon>
                   <HomeIcon />
                 </ListItemIcon>
@@ -100,7 +100,7 @@ export default function Navbar() {
           </Link>
           <Link to='/weather'>
             <ListItem disablePadding>
-              <ListItemButton>
+              <ListItemButton className='drawer-button'>
                 <ListItemIcon>
                   <CloudIcon />
                 </ListItemIcon>
