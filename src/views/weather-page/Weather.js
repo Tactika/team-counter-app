@@ -79,15 +79,15 @@ const Weather = () => {
 
 
     return (
-        <div className='h-screen'>
+        <div id="weather" className='h-screen'>
             {
                 weatherData === undefined ?
                     (<div>Loading</div>) :
                     (
                         <form onSubmit={handleSubmit} key="formField">
 
-                            <h1 className='mt-20 justify-center flex text-4xl'>Weather</h1>
-                            <div className='grid h-screen place-items-center' >
+                            <h1 className='justify-center flex text-4xl'>Weather</h1>
+                            <div className='grid' >
                                 <Card variant="outlined" sx={{ width: 600, height: 'fit-content' }}>
                                     <CardContent>
                                         <Search>
