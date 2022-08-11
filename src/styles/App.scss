@@ -60,6 +60,24 @@ code {
   }
 }
 
+#weather {
+  background-image: url("https://images.unsplash.com/photo-1469122312224-c5846569feb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1978&q=80");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+
+  h1 {
+    padding-top: 5em;
+    font-size: 3rem;
+  }
+
+  .grid {
+    justify-content: center;
+    padding-top: 4rem;
+  }
+}
+
 .App-header {
   min-height: 100vh;
   display: flex;
@@ -414,3 +432,10 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   transform: rotate(-135deg);
   margin-top: -9px;
 }
+<<<<<<< HEAD
+=======
+
+.drawer-button:hover{
+  color: rebeccapurple
+}
+>>>>>>> 019e3881aa99a25e185cd34c1d999ecd19c2292f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { styled, useTheme } from "@mui/material/styles";
 import {
@@ -21,6 +22,19 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import CloudIcon from "@mui/icons-material/Cloud";
 import HomeIcon from "@mui/icons-material/Home";
 import { Link } from "react-router-dom";
+=======
+import React, { useState } from 'react';
+import { styled, useTheme } from '@mui/material/styles';
+import { Box, Drawer, CssBaseline, Toolbar, List, Typography, Divider, IconButton, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
+import MuiAppBar from '@mui/material/AppBar';
+import MenuIcon from '@mui/icons-material/Menu';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import CloudIcon from '@mui/icons-material/Cloud';
+import HomeIcon from '@mui/icons-material/Home';
+import PersonIcon from '@mui/icons-material/Person';
+import { Link } from 'react-router-dom'
+>>>>>>> 019e3881aa99a25e185cd34c1d999ecd19c2292f
 
 const drawerWidth = 240;
 
@@ -65,7 +79,7 @@ export default function Navbar() {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open}>
+      <AppBar position="fixed" open={open} style={{ background: 'white', color: 'rebeccapurple' }} >
         <Toolbar>
           <IconButton
             color="inherit"
@@ -107,9 +121,9 @@ export default function Navbar() {
         <List>
           <Link to="/">
             <ListItem disablePadding>
-              <ListItemButton>
+              <ListItemButton className='drawer-button'>
                 <ListItemIcon>
-                  <HomeIcon />
+                  <HomeIcon className='icons' />
                 </ListItemIcon>
                 <ListItemText>Home</ListItemText>
               </ListItemButton>
@@ -117,11 +131,21 @@ export default function Navbar() {
           </Link>
           <Link to="/weather">
             <ListItem disablePadding>
-              <ListItemButton>
+              <ListItemButton className='drawer-button'>
                 <ListItemIcon>
-                  <CloudIcon />
+                  <CloudIcon className='icons' />
                 </ListItemIcon>
                 <ListItemText>Weather</ListItemText>
+              </ListItemButton>
+            </ListItem>
+          </Link>
+          <Link to='/aboutus'>
+            <ListItem disablePadding>
+              <ListItemButton className='drawer-button'>
+                <ListItemIcon>
+                  <PersonIcon />
+                </ListItemIcon>
+                <ListItemText>About Us</ListItemText>
               </ListItemButton>
             </ListItem>
           </Link>
