@@ -50,7 +50,7 @@
   },
   "emmet.includeLanguages": {
     "postcss": [
-      "css" 
+      "css"
     ]
   }
 }
