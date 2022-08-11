@@ -28,7 +28,6 @@ const NotFoundPage = () => {
           <Link to="/">Go Home</Link>
         </Button>
       </ThemeProvider>
-      <p></p>
     </div>
   );
 };
