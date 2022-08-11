@@ -106,11 +106,11 @@ const Weather = () => {
                                         </Search>
                                         <div className='flex flex-nowrap text-2xl justify-center'>
                                             <ul>
-                                                <li className='mb-2 mt-8'>{weatherData.name} Weather <img className='inline' alt='weather icon' src={`http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png `}/></li>
+                                                <li className='mb-2 mt-8'>{weatherData.name} Weather <img className='inline' alt='weather icon' src={`http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png `} /></li>
                                                 <li className='mb-2' >Current Temp: {kelvinToFarenheight(weatherData.main.temp)} &#8457;</li>
                                                 <li className='mb-2' >Current Humidity: {weatherData.main.humidity}%</li>
                                                 <li className='mb-2'>Description: {weatherData.weather[0].description} </li>
-                                               
+
                                             </ul>
                                         </div>
                                     </CardContent>
