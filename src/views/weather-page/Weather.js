@@ -75,7 +75,6 @@ const Weather = () => {
         "&:focus": {
           width: "20ch",
         },
-<<<<<<< HEAD
       },
     },
   }));
@@ -141,63 +140,3 @@ const Weather = () => {
 };
 
 export default Weather;
-=======
-    }));
-
-
-    return (
-        <div id="weather" className='h-screen'>
-            {
-                weatherData === undefined ?
-                    (<div>Loading</div>) :
-                    (
-                        <form onSubmit={handleSubmit} key="formField">
-
-                            <h1 className='justify-center flex text-4xl'>Weather</h1>
-                            <div className='grid' >
-                                <Card variant="outlined" sx={{ width: 600, height: 'fit-content' }}>
-                                    <CardContent>
-                                        <Search>
-                                            <SearchIconWrapper>
-                                                <SearchIcon />
-                                            </SearchIconWrapper>
-                                            <StyledInputBase
-                                                placeholder="Search…"
-                                                inputProps={{ 'aria-label': 'search' }}
-                                                value={cityName}
-                                                key="cityValue"
-                                                name="city"
-                                                onChange={handleChange}
-                                                autoFocus
-                                            />
-                                        </Search>
-                                        <div className='flex flex-nowrap text-2xl justify-center'>
-                                            <ul>
-                                                <li className='mb-2 mt-8'>{weatherData.name} Weather <img className='inline' alt='weather icon' src={`http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png `}/></li>
-                                                <li className='mb-2' >Current Temp: {kelvinToFarenheight(weatherData.main.temp)} &#8457;</li>
-                                                <li className='mb-2' >Current Humidity: {weatherData.main.humidity}%</li>
-                                                <li className='mb-2'>Description: {weatherData.weather[0].description} </li>
-                                               
-                                            </ul>
-                                        </div>
-                                    </CardContent>
-                                    <CardActions className='mt-20 justify-center flex'>
-                                        <Button size="medium" variant='outlined' type="submit">Search</Button>
-                                    </CardActions>
-
-                                </Card>
-                            </div>
-                        </form>
-
-
-                    )
-            }
-
-
-        </div>
-    )
-}
-
-export default Weather
-
->>>>>>> 019e3881aa99a25e185cd34c1d999ecd19c2292f

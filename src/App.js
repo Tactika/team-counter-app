@@ -6,7 +6,7 @@ import Weather from "./views/weather-page/Weather";
 import Navbar from "./components/Navbar";
 import NotFoundPage from "./views/not-found-page/NotFoundPage";
 import AboutUs from "./views/about-us-page/AboutUs";
-import WebCam from "./views/web-cam-page/WebCam";
+// import WebCam from "./views/web-cam-page/WebCam";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         <Route path="/" element={<Counters />} />
         <Route path="/weather" element={<Weather />} />
         <Route path="/aboutus" element={<AboutUs />} />
-        <Route path="/webcam" element={<WebCam />} />
+        {/* <Route path="/webcam" element={<WebCam />} /> */}
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </div>

@@ -25,12 +25,10 @@ const NotFoundPage = () => {
         <Typography variant="subtitle1">ERROR 404</Typography>
         <Typography>This Page Is Not Found</Typography>
         <Button>
-          <Link to="/">Go Home
-          </Link>
+          <Link to="/">Go Home</Link>
         </Button>
       </ThemeProvider>
-      <p>
-      </p>
+      <p></p>
     </div>
   );
 };
