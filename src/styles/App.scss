@@ -1,4 +1,4 @@
-@tailwind base;
+@tailwind base; 
 @tailwind components;
 @tailwind utilities;
 
@@ -269,13 +269,6 @@ html,
 body {
   overflow-x: hidden;
   height: 100%;
-}
-
-#aboutus {
-  margin: 0;
-  background-color: black;
-  padding-top: 4rem;
-  height:100vh;
 }
 
 .header {

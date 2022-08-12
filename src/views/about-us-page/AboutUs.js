@@ -1,103 +1,132 @@
 import * as React from 'react';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-// import Grid from '@mui/material/Grid';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function AboutUs() {
     return (
-        <div id="aboutus" className='flex flex-wrap mx-20 justify-around' >
+        <div id="aboutus" className='flex flex-wrap mx-20 justify-around mt-16' >
             {/* damien card */}
-            <Card className='my-10 mx-10' sx={{ maxHeight: 550, maxWidth: 345, boxShadow: '0px 10px 20px 5px rgb(112, 76, 182)' }}>
+            <Card className='my-10 mx-10' sx={{
+                height: 'fit-content', maxWidth: 345,
+                boxShadow: '0px 10px 10px 5px rgba(0, 0, 0, 0.6)'
+            }}>
                 <CardMedia
                     component="img"
                     height="140"
                     image="https://avatars.githubusercontent.com/u/16322338?v=4"
                     alt="Mr. Richcreek"
                 />
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                        Mr. Richcreek
+                <Accordion>
+                    <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel1a-content"
+                        id="panel1a-header"
+                    >
+                        <Typography>Damien Richcreek</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Typography>
+                            I'm a Full Stack Software Engineer building professional web applications!
+                        </Typography>
+                    </AccordionDetails>
+                    <Typography>
+                        <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>GitHub</Button>
+                        <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>LinkedIn</Button>
+                        <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>Portfolio</Button>
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        I'm a Full Stack Software Engineer building professional web applications!
-                    </Typography>
-                </CardContent>
-                <CardActions>
-                    <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>GitHub</Button>
-                    <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>LinkedIn</Button>
-                    <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>Portfolio</Button>
-                </CardActions>
+                </Accordion>
             </Card>
             {/* frank card */}
-            <Card className='my-10 mx-10' sx={{ maxHeight: 550, maxWidth: 345, boxShadow: '0px 10px 20px 5px rgb(112, 76, 182)' }}>
+            <Card className='my-10 mx-10' sx={{ height: 'fit-content', maxWidth: 345, boxShadow: '0px 10px 10px 5px rgba(0, 0, 0, 0.6)' }}>
                 <CardMedia
                     component="img"
                     height="140"
                     image="https://avatars.githubusercontent.com/u/98143232?v=4"
-                    alt="Mr. Rivera"
+                    alt="Mr. Richcreek"
                 />
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                        Mr. Rivera
+                <Accordion>
+                    <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel1a-content"
+                        id="panel1a-header"
+                    >
+                        <Typography>Frank Rivers</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Typography>
+                            I'm a Full Stack Software Engineer building professional web applications!
+                        </Typography>
+                    </AccordionDetails>
+                    <Typography>
+                        <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>GitHub</Button>
+                        <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>LinkedIn</Button>
+                        <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>Portfolio</Button>
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        I'm a Junior Full Stack Developer building professional web applications
-                    </Typography>
-                </CardContent>
-                <CardActions>
-                    <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>GitHub</Button>
-                    <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>LinkedIn</Button>
-                    <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>Portfolio</Button>
-                </CardActions>
+                </Accordion>
             </Card>
             {/* nic card */}
-            <Card className='my-10 mx-10' sx={{ maxHeight: 550, maxWidth: 345, boxShadow: '0px 10px 20px 5px rgb(112, 76, 182)' }}>
+            <Card className='my-10 mx-10' sx={{ height: 'fit-content', maxWidth: 345, boxShadow: '0px 10px 10px 5px rgba(0, 0, 0, 0.6)' }}>
                 <CardMedia
                     component="img"
                     height="140"
                     image="https://avatars.githubusercontent.com/u/104329673?v=4"
-                    alt="Mr. Last"
+                    alt="Mr. Richcreek"
                 />
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                        Mr. Last
+                <Accordion>
+                    <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel1a-content"
+                        id="panel1a-header"
+                    >
+                        <Typography>Nic Last</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Typography>
+                            I'm a Full Stack Software Engineer building professional web applications!
+                        </Typography>
+                    </AccordionDetails>
+                    <Typography>
+                        <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>GitHub</Button>
+                        <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>LinkedIn</Button>
+                        <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>Portfolio</Button>
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        I'm a Junior Full Stack Developer building professional web applications
-                    </Typography>
-                </CardContent>
-                <CardActions>
-                    <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>GitHub</Button>
-                    <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>LinkedIn</Button>
-                    <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>Portfolio</Button>
-                </CardActions>
+                </Accordion>
             </Card>
             {/* val card */}
-            <Card className='my-10 mx-10' sx={{ maxHeight: 550, maxWidth: 345, boxShadow: '0px 10px 20px 5px rgb(112, 76, 182)' }}>
+            <Card className='my-10 mx-10' sx={{ height: 'fit-content', maxWidth: 345, boxShadow: '0px 10px 10px 5px rgba(0, 0, 0, 0.6)' }}>
                 <CardMedia
                     component="img"
                     height="140"
                     image="https://avatars.githubusercontent.com/u/104322947?v=4"
-                    alt="Mrs. Tovar"
+                    alt="Mr. Richcreek"
                 />
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                        Mrs. Tovar
+                <Accordion>
+                    <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel1a-content"
+                        id="panel1a-header"
+                    >
+                        <Typography>Valerie Tovar</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Typography>
+                            I'm a Full Stack Software Engineer building professional web applications!
+                        </Typography>
+                    </AccordionDetails>
+                    <Typography>
+                        <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>GitHub</Button>
+                        <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>LinkedIn</Button>
+                        <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>Portfolio</Button>
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        I'm a Junior Full Stack Developer building professional web applications
-                    </Typography>
-                </CardContent>
-                <CardActions>
-                    <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>GitHub</Button>
-                    <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>LinkedIn</Button>
-                    <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>Portfolio</Button>
-                </CardActions>
+                </Accordion>
             </Card>
-        </div>
+
+        </div >
     );
 }
