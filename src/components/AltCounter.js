@@ -17,7 +17,7 @@ const AltCounter = () => {
 
 
   return (
-    <div className='flex flex-wrap flex-col w-1/2 h-screen content-center bg-black text-purple-600 mt-12'>
+    <div className='flex flex-wrap flex-col w-1/2 h-screen content-center bg-black text-purple-600 mt-12 md:w-screen'>
       <img src={logo} className="h-64 z-0 animate-App-logo-float" alt="logo" />
       <div className="flex align-middle justify-center">
 

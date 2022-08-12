@@ -433,3 +433,9 @@ input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-2 {
 .drawer-button:hover{
   color: rebeccapurple
 }
+
+@media (max-width: 650px) { 
+  .weather-card{
+    width: 24rem;
+  }
+ }
