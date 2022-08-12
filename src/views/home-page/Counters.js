@@ -1,5 +1,5 @@
-import Counter from '../../components/Counter'
-import AltCounter from '../../components/AltCounter'
+import Counter from "../../components/Counter";
+import AltCounter from "../../components/AltCounter";
 import React from "react";
 
 const Counters = () => {
@@ -11,4 +11,4 @@ const Counters = () => {
     )
 }
 
-export default Counters
+export default Counters;
