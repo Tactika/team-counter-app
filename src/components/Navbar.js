@@ -94,7 +94,7 @@ export default function Navbar() {
           </IconButton>
           <Typography variant="h6" noWrap component="div">
             <Link to="/">
-            Team Counter App
+              Team Counter App
             </Link>
           </Typography>
         </Toolbar>
