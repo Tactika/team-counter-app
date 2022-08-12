@@ -15,7 +15,7 @@ const Weather = () => {
 
     useEffect(() => {
         async function fetchData() {
-            await fetch(`https://api.openweathermap.org/data/2.5/weather?%7Bq%7D=&%7Bappid%7D=&q=${city}&appid=a28ac8273592f5605f4b56bcce6da210`)
+            await fetch(`https://api.openweathermap.org/data/2.5/weather?%7Bq%7D=&%7Bappid%7D=&q=${city}&appid=${process.env.REACT_APP_API_KEY}`)
                 .then(response => response.json())
                 .then((payload) => setWeatherData(payload))
                 .catch(err => console.error(err))
