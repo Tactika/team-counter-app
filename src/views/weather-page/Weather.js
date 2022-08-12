@@ -17,6 +17,7 @@ const Weather = () => {
   useEffect(() => {
     async function fetchData() {
       await fetch(
+        //process.env.REACT_APP_API_KEY only works if you have a .env file in the root directory with a valid API key
         `https://api.openweathermap.org/data/2.5/weather?%7Bq%7D=&%7Bappid%7D=&q=${city}&appid=${process.env.REACT_APP_API_KEY}`
       )
         .then((response) => response.json())
@@ -76,6 +77,8 @@ const Weather = () => {
         "&:focus": {
           width: "20ch",
         },
+    }
+}
     }));
 
 const getWeatherBg = () => {
