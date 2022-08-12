@@ -8,6 +8,7 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 
+
 const Weather = () => {
   const [weatherData, setWeatherData] = useState();
   const [city, setCity] = useState("Riverside");
@@ -77,13 +78,29 @@ const Weather = () => {
         },
     }));
 
-
+const getWeatherBg = () => {
+    if (weatherData !== undefined) {
+       const weatherDescription = weatherData.weather[0].main
+       switch (weatherDescription) {
+        case 'Clear': return 'sunny'
+        case 'Thunderstorm': return 'thunderstorm'
+        case 'Rain': return 'rain'
+        case 'Drizzle': return 'lightrain'
+        case 'Snow': return 'snow'
+        case 'Clouds': return 'cloudy'
+        default: return 'bg-white' 
+       }
+    }
+}
+  
     return (
-        <div id="weather" className='h-screen'>
+        <div id="weather" className={`h-screen ${getWeatherBg()}`}>
+            
             {
                 weatherData === undefined ?
                     (<div>Loading</div>) :
                     (
+                        
                         <form onSubmit={handleSubmit} key="formField">
 
                             <h1 className='justify-center flex text-4xl'>Weather</h1>
@@ -122,6 +139,7 @@ const Weather = () => {
                                 </Card>
                             </div>
                         </form>
+                       
 
 
                     )
