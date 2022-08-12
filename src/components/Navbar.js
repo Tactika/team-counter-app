@@ -37,29 +37,29 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
 );
 
 const AppBar = styled(MuiAppBar, {
-  shouldForwardProp: (prop) => prop !== 'open',
+  shouldForwardProp: (prop) => prop !== "open",
 })(({ theme, open }) => ({
-  transition: theme.transitions.create(['margin', 'width'], {
+  transition: theme.transitions.create(["margin", "width"], {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
   }),
   ...(open && {
     width: `calc(100% - ${drawerWidth}px)`,
     marginLeft: `${drawerWidth}px`,
-    transition: theme.transitions.create(['margin', 'width'], {
+    transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,
     }),
   }),
 }));
 
-const DrawerHeader = styled('div')(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
+const DrawerHeader = styled("div")(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
   padding: theme.spacing(0, 1),
   // necessary for content to be below app bar
   ...theme.mixins.toolbar,
-  justifyContent: 'flex-end',
+  justifyContent: "flex-end",
 }));
 
 export default function Navbar() {
@@ -75,21 +75,27 @@ export default function Navbar() {
   };
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open} style={{ background: 'white', color: 'rebeccapurple' }} >
+      <AppBar
+        position="fixed"
+        open={open}
+        style={{ background: "white", color: "rebeccapurple" }}
+      >
         <Toolbar>
           <IconButton
             color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
-            sx={{ mr: 2, ...(open && { display: 'none' }) }}
+            sx={{ mr: 2, ...(open && { display: "none" }) }}
           >
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
+            <Link to="/">
             Team Counter App
+            </Link>
           </Typography>
         </Toolbar>
       </AppBar>
@@ -97,9 +103,9 @@ export default function Navbar() {
         sx={{
           width: drawerWidth,
           flexShrink: 0,
-          '& .MuiDrawer-paper': {
+          "& .MuiDrawer-paper": {
             width: drawerWidth,
-            boxSizing: 'border-box',
+            boxSizing: "border-box",
           },
         }}
         variant="persistent"
@@ -108,34 +114,38 @@ export default function Navbar() {
       >
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+            {theme.direction === "ltr" ? (
+              <ChevronLeftIcon />
+            ) : (
+              <ChevronRightIcon />
+            )}
           </IconButton>
         </DrawerHeader>
         <Divider />
         <List>
-          <Link to='/'>
+          <Link to="/">
             <ListItem disablePadding>
-              <ListItemButton className='drawer-button'>
+              <ListItemButton className="drawer-button">
                 <ListItemIcon>
-                  <HomeIcon className='icons' />
+                  <HomeIcon className="icons" />
                 </ListItemIcon>
                 <ListItemText>Home</ListItemText>
               </ListItemButton>
             </ListItem>
           </Link>
-          <Link to='/weather'>
+          <Link to="/weather">
             <ListItem disablePadding>
-              <ListItemButton className='drawer-button'>
+              <ListItemButton className="drawer-button">
                 <ListItemIcon>
-                  <CloudIcon className='icons' />
+                  <CloudIcon className="icons" />
                 </ListItemIcon>
                 <ListItemText>Weather</ListItemText>
               </ListItemButton>
             </ListItem>
           </Link>
-          <Link to='/aboutus'>
+          <Link to="/aboutus">
             <ListItem disablePadding>
-              <ListItemButton className='drawer-button'>
+              <ListItemButton className="drawer-button">
                 <ListItemIcon>
                   <PersonIcon />
                 </ListItemIcon>

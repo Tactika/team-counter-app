@@ -1,87 +1,86 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import { useEffect } from "react";
-import { styled, alpha } from '@mui/material/styles';
-import InputBase from '@mui/material/InputBase';
-import SearchIcon from '@mui/icons-material/Search';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
-import { Thunderstorm } from '@mui/icons-material';
+import { styled, alpha } from "@mui/material/styles";
+import InputBase from "@mui/material/InputBase";
+import SearchIcon from "@mui/icons-material/Search";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import Button from "@mui/material/Button";
+
 
 const Weather = () => {
-    const [weatherData, setWeatherData] = useState()
-    const [city, setCity] = useState("Riverside")
-    const [cityName, setCityName] = useState("")
+  const [weatherData, setWeatherData] = useState();
+  const [city, setCity] = useState("Riverside");
+  const [cityName, setCityName] = useState("");
 
-    useEffect(() => {
-        async function fetchData() {
-            await fetch(`https://api.openweathermap.org/data/2.5/weather?%7Bq%7D=&%7Bappid%7D=&q=${city}&appid=${process.env.REACT_APP_API_KEY}`)
-                .then(response => response.json())
-                .then((payload) => setWeatherData(payload))
-                .catch(err => console.error(err))
-        }
-        fetchData()
-    }, [city])
-
-    const kelvinToFarenheight = tempInKelvin => {
-        return Math.round((tempInKelvin - 273.15) * 9 / 5 + 32)
+  useEffect(() => {
+    async function fetchData() {
+      await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?%7Bq%7D=&%7Bappid%7D=&q=${city}&appid=${process.env.REACT_APP_API_KEY}`
+      )
+        .then((response) => response.json())
+        .then((payload) => setWeatherData(payload))
+        .catch((err) => console.error(err));
     }
+    fetchData();
+  }, [city]);
 
-    const handleChange = (e) => {
-        setCityName(e.target.value)
-    }
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        setCity(cityName)
-    }
+  const kelvinToFarenheight = (tempInKelvin) => {
+    return Math.round(((tempInKelvin - 273.15) * 9) / 5 + 32);
+  };
 
-    const Search = styled('div')(({ theme }) => ({
-        position: 'relative',
-        borderRadius: theme.shape.borderRadius,
-        backgroundColor: alpha(theme.palette.common.black, 0.15),
-        '&:hover': {
-            backgroundColor: alpha(theme.palette.common.black, 0.25),
-        },
-        marginLeft: 0,
-        width: '100%',
-        [theme.breakpoints.up('sm')]: {
-            marginLeft: theme.spacing(1),
-            width: 'auto',
-        },
-    }));
+  const handleChange = (e) => {
+    setCityName(e.target.value);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setCity(cityName);
+  };
 
-    const SearchIconWrapper = styled('div')(({ theme }) => ({
-        padding: theme.spacing(0, 2),
-        height: '100%',
-        position: 'absolute',
-        pointerEvents: 'none',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-    }));
+  const Search = styled("div")(({ theme }) => ({
+    position: "relative",
+    borderRadius: theme.shape.borderRadius,
+    backgroundColor: alpha(theme.palette.common.black, 0.15),
+    "&:hover": {
+      backgroundColor: alpha(theme.palette.common.black, 0.25),
+    },
+    marginLeft: 0,
+    width: "100%",
+    [theme.breakpoints.up("sm")]: {
+      marginLeft: theme.spacing(1),
+      width: "auto",
+    },
+  }));
 
-    const StyledInputBase = styled(InputBase)(({ theme }) => ({
-        color: 'inherit',
-        '& .MuiInputBase-input': {
-            padding: theme.spacing(1, 1, 1, 0),
-            // vertical padding + font size from searchIcon
-            paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-            transition: theme.transitions.create('width'),
-            width: '100%',
-            [theme.breakpoints.up('sm')]: {
-                width: '12ch',
-                '&:focus': {
-                    width: '20ch',
-                },
-            },
+  const SearchIconWrapper = styled("div")(({ theme }) => ({
+    padding: theme.spacing(0, 2),
+    height: "100%",
+    position: "absolute",
+    pointerEvents: "none",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  }));
+
+  const StyledInputBase = styled(InputBase)(({ theme }) => ({
+    color: "inherit",
+    "& .MuiInputBase-input": {
+      padding: theme.spacing(1, 1, 1, 0),
+      // vertical padding + font size from searchIcon
+      paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+      transition: theme.transitions.create("width"),
+      width: "100%",
+      [theme.breakpoints.up("sm")]: {
+        width: "12ch",
+        "&:focus": {
+          width: "20ch",
         },
     }));
 
 const getWeatherBg = () => {
     if (weatherData !== undefined) {
        const weatherDescription = weatherData.weather[0].main
-       console.log(weatherDescription) 
        switch (weatherDescription) {
         case 'Clear': return 'sunny'
         case 'Thunderstorm': return 'thunderstorm'
@@ -93,7 +92,7 @@ const getWeatherBg = () => {
        }
     }
 }
-    console.log(weatherData)
+  
     return (
         <div id="weather" className={`h-screen ${getWeatherBg()}`}>
             
@@ -106,7 +105,8 @@ const getWeatherBg = () => {
 
                             <h1 className='justify-center flex text-4xl'>Weather</h1>
                             <div className='grid' >
-                                <Card variant="outlined" sx={{ width: 600, height: 'fit-content' }}>
+                                <Card variant="outlined" className='h-fit w-[38rem] sm:w-96'
+                                >
                                     <CardContent>
                                         <Search>
                                             <SearchIconWrapper>
@@ -124,11 +124,11 @@ const getWeatherBg = () => {
                                         </Search>
                                         <div className='flex flex-nowrap text-2xl justify-center'>
                                             <ul>
-                                                <li className='mb-2 mt-8'>{weatherData.name} Weather <img className='inline' alt='weather icon' src={`http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png `}/></li>
+                                                <li className='mb-2 mt-8'>{weatherData.name} Weather <img className='inline' alt='weather icon' src={`http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png `} /></li>
                                                 <li className='mb-2' >Current Temp: {kelvinToFarenheight(weatherData.main.temp)} &#8457;</li>
                                                 <li className='mb-2' >Current Humidity: {weatherData.main.humidity}%</li>
                                                 <li className='mb-2'>Description: {weatherData.weather[0].description} </li>
-                                               
+
                                             </ul>
                                         </div>
                                     </CardContent>
@@ -151,4 +151,3 @@ const getWeatherBg = () => {
 }
 
 export default Weather
-
