@@ -16,17 +16,16 @@ const AltCounter = () => {
   const [altIncrementAmount, setAltIncrementAmount] = useState(2);
 
   const changeIncrementAmount = (incrementAmount) => {
-    var intIncrementAmount = parseInt(incrementAmount);
-    console.log(typeof intIncrementAmount);
+    var intIncrementAmount = parseInt(incrementAmount) || 0;
     setAltIncrementAmount(intIncrementAmount);
   };
 
   return (
-    <div className='flex flex-wrap flex-col w-1/2 h-screen content-center bg-black text-purple-600 mt-12 md:w-screen'>
+    <div className='flex flex-wrap flex-col w-1/2 max-h-full bg-black content-center md:w-screen'>
       <img src={logo} className="h-64 z-0 animate-App-logo-float" alt="logo" />
-      <div className="flex align-middle justify-center">
+      <div className="flex items-center justify-center">
         <button
-          className="pl-3 pr-3 pb-1 w-12 h-12 text-4xl border-solid border-2 border-purple-600"
+          className="px-3 pb-1 w-12 h-12 text-4xl border-solid border-2 border-purple-600 text-purple-600 "
           aria-label="increment alt value"
           onClick={() => dispatch(altincrement())}
         >
@@ -34,7 +33,7 @@ const AltCounter = () => {
         </button>
         <span className="text-7xl pl-10 pr-10 text-purple-600">{altcount}</span>
         <button
-          className="pl-3 pr-3 pb-1 w-12 h-12 text-4xl border-solid border-2 border-purple-600"
+          className="pl-3 pr-3 pb-1 w-12 h-12 text-4xl border-solid border-2 border-purple-600 text-purple-600"
           aria-label="decrement alt value"
           onClick={() => dispatch(altdecrement())}
         >
@@ -43,8 +42,7 @@ const AltCounter = () => {
       </div>
       <div className="flex align-middle flex-col justify-center">
         <input
-          type="text"
-          className="mb-8 text-4xl border-solid border-purple-600"
+          className="mb-8 text-4xl border-solid border-purple-600 text-center"
           aria-label="Set Increment Amount"
           value={altIncrementAmount}
           onChange={(e) => changeIncrementAmount(e.target.value)}
