@@ -461,5 +461,8 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   .weather-card{
     width: 24rem;
   }
+  .MuiPaper-root {
+    width: 100vw !important;
+  }
  }
 
