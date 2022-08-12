@@ -125,7 +125,7 @@ export default function Navbar() {
         <List>
           <Link to="/">
             <ListItem disablePadding>
-              <ListItemButton className="drawer-button">
+              <ListItemButton className="drawer-button" onClick={handleDrawerClose}>
                 <ListItemIcon>
                   <HomeIcon className="icons" />
                 </ListItemIcon>
@@ -135,7 +135,7 @@ export default function Navbar() {
           </Link>
           <Link to="/weather">
             <ListItem disablePadding>
-              <ListItemButton className="drawer-button">
+              <ListItemButton className="drawer-button" onClick={handleDrawerClose}>
                 <ListItemIcon>
                   <CloudIcon className="icons" />
                 </ListItemIcon>
@@ -145,7 +145,7 @@ export default function Navbar() {
           </Link>
           <Link to="/aboutus">
             <ListItem disablePadding>
-              <ListItemButton className="drawer-button">
+              <ListItemButton className="drawer-button" onClick={handleDrawerClose}>
                 <ListItemIcon>
                   <PersonIcon />
                 </ListItemIcon>
