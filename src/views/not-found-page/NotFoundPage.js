@@ -23,9 +23,19 @@ const NotFoundPage = () => {
     <div id="aboutus" className="flex-wrap">
       <ThemeProvider theme={theme}>
         <Typography variant="subtitle1">ERROR 404</Typography>
-        <Typography>This Page Is Not Found</Typography>
+        <Typography>
+          <ls>
+            <li>This Page Is Not Found </li>
+            <li>Do you have errors in your server terminal?</li> 
+            <li>Have you cleared your browser console for errors?</li>
+            <li>Did you just type in random letters and words in the URL? </li>
+          </ls>
+        </Typography>
         <Button>
           <Link to="/">Go Home</Link>
+        </Button>
+        <Button>
+          <Link to="https://letmegooglethat.com/">What is the problem?</Link>
         </Button>
       </ThemeProvider>
     </div>
