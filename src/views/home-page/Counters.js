@@ -4,7 +4,7 @@ import React from "react";
 
 const Counters = () => {
     return (
-        <div className='flex w-screen' >
+        <div className='flex w-screen md:block' >
             <Counter />
             <AltCounter />
         </div>
