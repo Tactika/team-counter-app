@@ -53,6 +53,47 @@ code {
   }
 }
 
+.sunny {
+  background-image: url("https://tinyurl.com/3ydt64te");
+}
+
+.thunderstorm {
+  background-image: url("https://tinyurl.com/8rcyc6jv");
+}
+
+.rain {
+  background-image: url("https://tinyurl.com/yc882732");
+}
+
+.lightrain {
+  background-image: url("https://tinyurl.com/4c8z3uwy");
+}
+
+.snow {
+  background-image: url("https://tinyurl.com/r59v5nwe");
+}
+
+.cloudy {
+  background-image: url("https://tinyurl.com/2p8cj6pw");
+}
+
+#weather {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+
+  h1 {
+    padding-top: 5em;
+    font-size: 3rem;
+  }
+
+  .grid {
+    justify-content: center;
+    padding-top: 4rem;
+  }
+}
+
 .App-header {
   min-height: 100vh;
   display: flex;
@@ -117,7 +158,7 @@ input {
   font-size: 25px;
   padding-left: 12px;
   padding-right: 12px;
- }
+}
 
 .altTextbox {
   font-size: 32px;
@@ -253,7 +294,9 @@ body {
   height: 100%;
 }
 
-
+#aboutus {
+  margin-top: 80px;
+}
 
 .header {
   display: block;
@@ -408,4 +451,8 @@ input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-2 {
   box-sizing: border-box;
   transform: rotate(-135deg);
   margin-top: -9px;
+}
+
+.drawer-button:hover{
+  color: rebeccapurple
 }

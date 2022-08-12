@@ -1,20 +1,11 @@
 import React from 'react';
-import Counters from './views/home-page/Counters';
 import './styles/App.scss';
-import { Routes, Route } from "react-router-dom";
-import Weather from './views/weather-page/Weather';
 import Navbar from './components/Navbar'
+
 
 function App() {
   return (
-    <div className="items-center" >
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<Counters />} />
-        <Route path='/weather' element={<Weather />} />
-      </Routes>
-
-    </div>
+    <Navbar id="navbarHeader" className="items-center, body" />
   );
 }
 

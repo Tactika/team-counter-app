@@ -2,7 +2,7 @@ import counterReducer, {
   increment,
   decrement,
   incrementByAmount,
-} from './counterSlice';
+} from '../redux/slice/counterSlice';
 
 describe('counter reducer', () => {
   const initialState = {
@@ -30,4 +30,9 @@ describe('counter reducer', () => {
     const actual = counterReducer(initialState, incrementByAmount(2));
     expect(actual.value).toEqual(5);
   });
+  // add if odd test 
+  // add if even test 
+  // add sync state test 
+  // add async delay time test 
+
 });
