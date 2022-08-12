@@ -1,4 +1,4 @@
-@tailwind base;
+@tailwind base; 
 @tailwind components;
 @tailwind utilities;
 
@@ -274,10 +274,6 @@ body {
   height: 100%;
 }
 
-#aboutus {
-  margin-top: 80px;
-}
-
 .header {
   display: block;
   margin: 0 auto;
@@ -443,3 +439,4 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     width: 24rem;
   }
  }
+
