@@ -14,7 +14,7 @@ const theme = createTheme({
       fontWeight: 500,
     },
     button: {
-      fontStyle: "italic",
+      fontStyle: "bold",
     },
   },
 });
@@ -34,8 +34,9 @@ const NotFoundPage = () => {
         <Button>
           <Link to="/">Go Home</Link>
         </Button>
+        |
         <Button>
-          <Link to="https://letmegooglethat.com/">What is the problem?</Link>
+          <a href="https://letmegooglethat.com/">What is the problem?</a>
         </Button>
       </ThemeProvider>
     </div>

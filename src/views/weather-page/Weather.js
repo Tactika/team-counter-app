@@ -94,7 +94,6 @@ const Weather = () => {
             }
         }
     }
-
     function handleError (response) {
         if(!response.ok) {
            throw alert("enter valid city")     

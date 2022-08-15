@@ -2,7 +2,7 @@ import counterReducer, {
   increment,
   decrement,
   incrementByAmount,
-} from "../redux/slice/counterSlice";
+} from '../redux/slice/counterSlice';
 
 describe("counter reducer", () => {
   const initialState = {
@@ -35,4 +35,5 @@ describe("counter reducer", () => {
   // add if even test
   // add sync state test
   // add async delay time test
+
 });
