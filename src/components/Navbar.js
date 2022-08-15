@@ -25,7 +25,7 @@ import { Link } from "react-router-dom";
 import Weather from "../views/weather-page/Weather";
 import AboutUs from "../views/about-us-page/AboutUs";
 import Counters from "../views/home-page/Counters";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import NotFoundPage from "../views/not-found-page/NotFoundPage";
 
 const drawerWidth = 240;
@@ -87,6 +87,7 @@ export default function Navbar() {
   };
 
   return (
+    <Router>
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar
@@ -184,5 +185,6 @@ export default function Navbar() {
         </Routes>
       </Main>
     </Box>
+    </Router>
   );
 }

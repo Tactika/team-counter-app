@@ -12,6 +12,10 @@ This application has a counter application that you can increment, decrement, ad
 ### Technologies Used
 
 - React
+   - react testing:
+```
+$ npm test 
+``` 
 - Redux
 - Tailwind CSS
 - Material UI
