@@ -1,4 +1,4 @@
-@tailwind base; 
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -452,16 +452,15 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   margin-top: -9px;
 }
 
-
-.drawer-button:hover{
-  color: rebeccapurple
+.drawer-button:hover {
+  color: rebeccapurple;
 }
 
-@media (max-width: 650px) { 
-  .weather-card{
+@media (max-width: 650px) {
+  .weather-card {
     width: 24rem;
   }
   .MuiPaper-root {
     width: 100vw !important;
   }
- }
+}

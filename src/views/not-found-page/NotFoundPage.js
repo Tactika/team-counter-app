@@ -14,7 +14,7 @@ const theme = createTheme({
       fontWeight: 500,
     },
     button: {
-      fontStyle: "italic",
+      fontStyle: "bold",
     },
   },
 });
@@ -26,7 +26,7 @@ const NotFoundPage = () => {
         <Typography>
           <ls>
             <li>This Page Is Not Found </li>
-            <li>Do you have errors in your server terminal?</li> 
+            <li>Do you have errors in your server terminal?</li>
             <li>Have you cleared your browser console for errors?</li>
             <li>Did you just type in random letters and words in the URL? </li>
           </ls>
@@ -34,6 +34,7 @@ const NotFoundPage = () => {
         <Button>
           <Link to="/">Go Home</Link>
         </Button>
+        |
         <Button>
           <Link to="https://letmegooglethat.com/">What is the problem?</Link>
         </Button>

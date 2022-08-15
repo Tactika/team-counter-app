@@ -19,8 +19,7 @@ export default function Counter() {
   const incrementValue = Number(incrementAmount) || 0;
 
   return (
-
-    <div className='flex flex-wrap flex-col w-1/2 max-h-full bg-white content-center md:w-screen'>
+    <div className="flex flex-wrap flex-col w-1/2 max-h-full bg-white content-center md:w-screen">
       <img src={logo} className="h-64 z-0 animate-App-logo-float" alt="logo" />
       <div className="flex items-center justify-center">
         <button
