@@ -19,8 +19,7 @@ export default function Counter() {
   const incrementValue = Number(incrementAmount) || 0;
 
   return (
-
-    <div className='flex flex-wrap flex-col w-1/2 max-h-full bg-white content-center md:w-screen'>
+    <div className="flex flex-wrap flex-col w-1/2 max-h-full bg-white content-center md:w-screen">
       <img src={logo} className="h-64 z-0 animate-App-logo-float" alt="logo" />
       <div className="flex items-center justify-center">
         <button
@@ -57,7 +56,7 @@ export default function Counter() {
         <button
           className="appearance-none bg-none text-4xl pl-12 pr-12 outline-none border-2 border-solid border-transparent text-purple-600 mb-3 pb-1 cursor-pointer bg-purple-600/[0.1] rounded-sm transition-all hover:border-2 hover:border-solid  hover:border-purple-600/[0.4] focus:outline-2"
           onClick={() => {
-            dispatch(incrementAmountBy(incrementAmount));
+            dispatch(incrementAmountBy(incrementValue));
           }}
         >
           Add To Black

@@ -3,10 +3,10 @@ module.exports = {
   content: ["./src/**/*.{html,js,tsx,ts}"],
   theme: {
     screens: {
-      'sm': { 'max': '650px' },
+      sm: { max: "650px" },
       // => @media (max-width: 650px) { ... }
 
-      'md': { 'max': '800px' }
+      md: { max: "800px" },
       // => @media (max-width: 800px) { ... }
     },
     extend: {

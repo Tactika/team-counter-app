@@ -1,12 +1,12 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardMedia from "@mui/material/CardMedia";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 export default function AboutUs() {
     return (
@@ -36,9 +36,9 @@ export default function AboutUs() {
                         </Typography>
                     </AccordionDetails>
                     <Typography>
-                        <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>GitHub</Button>
-                        <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>LinkedIn</Button>
-                        <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>Portfolio</Button>
+                        <Button  href="https://github.com/Tactika" aria-label="button to Damien's Github" size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>GitHub</Button>
+                        <Button href="https://www.linkedin.com/in/drichcreek" aria-label="button to Damien's LinkedIn" size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>LinkedIn</Button>
+                        <Button href="https://www.richcreek.dev" size="small" aria-label="button to Damien's Portfolio" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>Portfolio</Button>
                     </Typography>
                 </Accordion>
             </Card>
@@ -64,9 +64,9 @@ export default function AboutUs() {
                         </Typography>
                     </AccordionDetails>
                     <Typography>
-                        <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>GitHub</Button>
-                        <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>LinkedIn</Button>
-                        <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>Portfolio</Button>
+                        <Button href="https://github.com/F-Rivers" aria-label="button to Frank's Github" size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>GitHub</Button>
+                        <Button href="https://www.linkedin.com/in/rivera-francisco/" aria-label="button to Frank's LinkedIn" size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>LinkedIn</Button>
+                        <Button href="https://frankrivera.carrd.co/" size="small" aria-label="button to Frank's Portfolio" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>Portfolio</Button>
                     </Typography>
                 </Accordion>
             </Card>
@@ -92,9 +92,9 @@ export default function AboutUs() {
                         </Typography>
                     </AccordionDetails>
                     <Typography>
-                        <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>GitHub</Button>
-                        <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>LinkedIn</Button>
-                        <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>Portfolio</Button>
+                        <Button href="https://github.com/niclast7611" aria-label="button to Nic's Github" size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>GitHub</Button>
+                        <Button href="https://www.linkedin.com/in/nicolas-last-095099239/" aria-label="button to Nic's LinkedIn" size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>LinkedIn</Button>
+                        <Button href="niclast7611.github.io/nl-portfolio/" aria-label="button to Nic's Portfolio" size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>Portfolio</Button>
                     </Typography>
                 </Accordion>
             </Card>
@@ -120,9 +120,9 @@ export default function AboutUs() {
                         </Typography>
                     </AccordionDetails>
                     <Typography>
-                        <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>GitHub</Button>
-                        <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>LinkedIn</Button>
-                        <Button size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>Portfolio</Button>
+                        <Button href="https://github.com/vjtovar" aria-label="button to Nic's Github" size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>GitHub</Button>
+                        <Button href="https://www.linkedin.com/in/valerie-j-tovar/" aria-label="button to Nic's Github" size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>LinkedIn</Button>
+                        <Button href="https://vjtovar.github.io/my-app/" aria-label="button to Nic's Github" size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>Portfolio</Button>
                     </Typography>
                 </Accordion>
             </Card>

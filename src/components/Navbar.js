@@ -1,39 +1,51 @@
-import React, { useState } from 'react';
-import { styled, useTheme } from '@mui/material/styles';
-import { Box, Drawer, CssBaseline, Toolbar, List, Typography, Divider, IconButton, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
-import MuiAppBar from '@mui/material/AppBar';
-import MenuIcon from '@mui/icons-material/Menu';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import CloudIcon from '@mui/icons-material/Cloud';
-import HomeIcon from '@mui/icons-material/Home';
-import PersonIcon from '@mui/icons-material/Person';
-import { Link } from 'react-router-dom'
-import Weather from '../views/weather-page/Weather'
-import AboutUs from "../views/about-us-page/AboutUs"
-import Counters from "../views/home-page/Counters"
-import { Routes, Route } from "react-router-dom";
-import NotFoundPage from "../views/not-found-page/NotFoundPage"
-
+import React, { useState } from "react";
+import { styled, useTheme } from "@mui/material/styles";
+import {
+  Box,
+  Drawer,
+  CssBaseline,
+  Toolbar,
+  List,
+  Typography,
+  Divider,
+  IconButton,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+} from "@mui/material";
+import MuiAppBar from "@mui/material/AppBar";
+import MenuIcon from "@mui/icons-material/Menu";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import CloudIcon from "@mui/icons-material/Cloud";
+import HomeIcon from "@mui/icons-material/Home";
+import PersonIcon from "@mui/icons-material/Person";
+import { Link } from "react-router-dom";
+import Weather from "../views/weather-page/Weather";
+import AboutUs from "../views/about-us-page/AboutUs";
+import Counters from "../views/home-page/Counters";
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
+import NotFoundPage from "../views/not-found-page/NotFoundPage";
 
 const drawerWidth = 240;
-const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
+const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
   ({ theme, open }) => ({
     flexGrow: 1,
     padding: theme.spacing(0),
-    transition: theme.transitions.create('margin', {
+    transition: theme.transitions.create("margin", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
     marginLeft: `-${drawerWidth}px`,
     ...(open && {
-      transition: theme.transitions.create('margin', {
+      transition: theme.transitions.create("margin", {
         easing: theme.transitions.easing.easeOut,
         duration: theme.transitions.duration.enteringScreen,
       }),
       marginLeft: 0,
     }),
-  }),
+  })
 );
 
 const AppBar = styled(MuiAppBar, {
@@ -75,6 +87,7 @@ export default function Navbar() {
   };
 
   return (
+    <Router>
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar
@@ -93,9 +106,7 @@ export default function Navbar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            <Link to="/">
-              Team Counter App
-            </Link>
+            <Link to="/">Team Counter App</Link>
           </Typography>
         </Toolbar>
       </AppBar>
@@ -125,7 +136,10 @@ export default function Navbar() {
         <List>
           <Link to="/">
             <ListItem disablePadding>
-              <ListItemButton className="drawer-button" onClick={handleDrawerClose}>
+              <ListItemButton
+                className="drawer-button"
+                onClick={handleDrawerClose}
+              >
                 <ListItemIcon>
                   <HomeIcon className="icons" />
                 </ListItemIcon>
@@ -135,7 +149,10 @@ export default function Navbar() {
           </Link>
           <Link to="/weather">
             <ListItem disablePadding>
-              <ListItemButton className="drawer-button" onClick={handleDrawerClose}>
+              <ListItemButton
+                className="drawer-button"
+                onClick={handleDrawerClose}
+              >
                 <ListItemIcon>
                   <CloudIcon className="icons" />
                 </ListItemIcon>
@@ -145,7 +162,10 @@ export default function Navbar() {
           </Link>
           <Link to="/aboutus">
             <ListItem disablePadding>
-              <ListItemButton className="drawer-button" onClick={handleDrawerClose}>
+              <ListItemButton
+                className="drawer-button"
+                onClick={handleDrawerClose}
+              >
                 <ListItemIcon>
                   <PersonIcon />
                 </ListItemIcon>
@@ -158,12 +178,13 @@ export default function Navbar() {
       <Main open={open}>
         <DrawerHeader />
         <Routes>
-          <Route path='/' element={<Counters />} />
-          <Route path='/weather' element={<Weather />} />
-          <Route path='/aboutus' element={<AboutUs />} />
-          <Route path='*' element={<NotFoundPage />} />
+          <Route path="/" element={<Counters />} />
+          <Route path="/weather" element={<Weather />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Main>
     </Box>
+    </Router>
   );
 }
