@@ -13,66 +13,86 @@ const Weather = () => {
     const [city, setCity] = useState("Riverside");
     const [cityName, setCityName] = useState("");
 
-    useEffect(() => {
-        async function fetchData() {
-            await fetch(
-                `https://api.openweathermap.org/data/2.5/weather?%7Bq%7D=&%7Bappid%7D=&q=${city}&appid=${process.env.REACT_APP_API_KEY}`
-            )
+  useEffect(() => {
+    async function fetchData() {
+      await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?%7Bq%7D=&%7Bappid%7D=&q=${city}&appid=${process.env.REACT_APP_API_KEY}`
+      )
                 .then(handleError)
-                .then((response) => response.json())
-                .then((payload) => setWeatherData(payload))
-                .catch((err) => console.error(err));
-        }
-        fetchData();
-    }, [city]);
+        .then((response) => response.json())
+        .then((payload) => setWeatherData(payload))
+        .catch((err) => console.error(err));
+    }
+    fetchData();
+  }, [city]);
 
-    const kelvinToFarenheight = (tempInKelvin) => {
-        return Math.round(((tempInKelvin - 273.15) * 9) / 5 + 32);
-    };
+  const kelvinToFarenheight = (tempInKelvin) => {
+    return Math.round(((tempInKelvin - 273.15) * 9) / 5 + 32);
+  };
 
-    const handleChange = (e) => {
-        setCityName(e.target.value);
-    };
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setCity(cityName);
-    };
+  const handleChange = (e) => {
+    setCityName(e.target.value);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setCity(cityName);
+  };
 
-    const Search = styled("div")(({ theme }) => ({
-        position: "relative",
-        borderRadius: theme.shape.borderRadius,
-        backgroundColor: alpha(theme.palette.common.black, 0.15),
-        "&:hover": {
-            backgroundColor: alpha(theme.palette.common.black, 0.25),
-        },
-        marginLeft: 0,
-        width: "100%",
-        [theme.breakpoints.up("sm")]: {
-            marginLeft: theme.spacing(1),
-            width: "auto",        },
-      },
+  const Search = styled("div")(({ theme }) => ({
+    position: "relative",
+    borderRadius: theme.shape.borderRadius,
+    backgroundColor: alpha(theme.palette.common.black, 0.15),
+    "&:hover": {
+      backgroundColor: alpha(theme.palette.common.black, 0.25),
+    },
+    marginLeft: 0,
+    width: "100%",
+    [theme.breakpoints.up("sm")]: {
+      marginLeft: theme.spacing(1),
+      width: "auto",
     },
   }));
 
-  const getWeatherBg = () => {
-    if (weatherData !== undefined) {
-      const weatherDescription = weatherData.weather[0].main;
-      switch (weatherDescription) {
-        case "Clear":
-          return "sunny";
-        case "Thunderstorm":
-          return "thunderstorm";
-        case "Rain":
-          return "rain";
-        case "Drizzle":
-          return "lightrain";
-        case "Snow":
-          return "snow";
-        case "Clouds":
-          return "cloudy";
-        default:
-          return "bg-white";
-      }
+  const SearchIconWrapper = styled("div")(({ theme }) => ({
+    padding: theme.spacing(0, 2),
+    height: "100%",
+    position: "absolute",
+    pointerEvents: "none",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  }));
+
+    const StyledInputBase = styled(InputBase)(({ theme }) => ({
+        color: "inherit",
+        "& .MuiInputBase-input": {
+            padding: theme.spacing(1, 1, 1, 0),
+            // vertical padding + font size from searchIcon
+            paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+            transition: theme.transitions.create("width"),
+            width: "100%",
+            [theme.breakpoints.up("sm")]: {
+                width: "12ch",
+                "&:focus": {
+                    width: "20ch",
+                }
+            }
+        }
+    }));
+
+    const getWeatherBg = () => {
+        if (weatherData !== undefined) {
+            const weatherDescription = weatherData.weather[0].main
+            switch (weatherDescription) {
+                case 'Clear': return 'sunny'
+                case 'Thunderstorm': return 'thunderstorm'
+                case 'Rain': return 'rain'
+                case 'Drizzle': return 'lightrain'
+                case 'Snow': return 'snow'
+                case 'Clouds': return 'cloudy'
+                default: return 'bg-white'
+            }
+        }
     }
     function handleError (response) {
         if(!response.ok) {
