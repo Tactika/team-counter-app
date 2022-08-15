@@ -19,6 +19,7 @@ const Weather = () => {
             await fetch(
                 `https://api.openweathermap.org/data/2.5/weather?%7Bq%7D=&%7Bappid%7D=&q=${city}&appid=${process.env.REACT_APP_API_KEY}`
             )
+                .then(handleError)
                 .then((response) => response.json())
                 .then((payload) => setWeatherData(payload))
                 .catch((err) => console.error(err));
@@ -95,8 +96,16 @@ const Weather = () => {
         }
     }
 
+    function handleError (response) {
+        if(!response.ok) {
+           throw alert("enter valid city")     
+        } 
+        return response
+    }
+
     return (
         <div id="weather" className={`h-screen ${getWeatherBg()}`}>
+
 
             {
                 weatherData === undefined ?
@@ -122,6 +131,7 @@ const Weather = () => {
                                                 name="city"
                                                 onChange={handleChange}
                                                 autoFocus
+                                                required
                                             />
                                         </Search>
                                         <div className='flex flex-nowrap text-2xl justify-center'>
