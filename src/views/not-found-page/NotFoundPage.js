@@ -36,7 +36,7 @@ const NotFoundPage = () => {
         </Button>
         |
         <Button>
-          <Link to="https://letmegooglethat.com/">What is the problem?</Link>
+          <a href="https://letmegooglethat.com/">What is the problem?</a>
         </Button>
       </ThemeProvider>
     </div>
