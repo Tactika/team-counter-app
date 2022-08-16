@@ -1,11 +1,5 @@
 import * as React from "react";
-import Card from "@mui/material/Card";
-import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
+import { Card, CardMedia, Button, Typography, Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 export default function AboutUs() {
@@ -36,7 +30,7 @@ export default function AboutUs() {
                         </Typography>
                     </AccordionDetails>
                     <Typography>
-                        <Button  href="https://github.com/Tactika" aria-label="button to Damien's Github" size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>GitHub</Button>
+                        <Button href="https://github.com/Tactika" aria-label="button to Damien's Github" size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>GitHub</Button>
                         <Button href="https://www.linkedin.com/in/drichcreek" aria-label="button to Damien's LinkedIn" size="small" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>LinkedIn</Button>
                         <Button href="https://www.richcreek.dev" size="small" aria-label="button to Damien's Portfolio" sx={{ color: 'rgb(112, 76, 182)', fontWeight: 800 }}>Portfolio</Button>
                     </Typography>
